@@ -10,7 +10,7 @@ export interface ProjectInterface extends Document {
 
 const ProjectSchema = new Schema<ProjectInterface>({
   name: { type: String, required: true },
-  description: { type: String, required: true },
+  description: { type: String, required: false },
   location: { type: String, required: true },
   unitsNumber: { type: Number, required: true },
   number: { type: String, unique: true, required: true },

@@ -14,7 +14,7 @@ export interface ApartmentInterface extends Document {
 const ApartmentSchema = new Schema<ApartmentInterface>({
   name: { type: String, required: true },
   price: { type: Number, required: true },
-  description: { type: String, required: true },
+  description: { type: String, required: false },
   location: { type: String, required: true },
   width: { type: Number, required: true },
   meterPrice: { type: Number, required: true },
