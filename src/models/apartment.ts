@@ -9,6 +9,7 @@ export interface ApartmentInterface extends Document {
   meterPrice: number;
   number: string;
   projectId: mongoose.Types.ObjectId;
+  images: string[];
 }
 
 const ApartmentSchema = new Schema<ApartmentInterface>({
@@ -24,6 +25,7 @@ const ApartmentSchema = new Schema<ApartmentInterface>({
     ref: "Project",
     required: true,
   },
+  images: { type: [String], required: false },
 }, { timestamps: true });
 
 const ApartmentModel = mongoose.model<ApartmentInterface>(
