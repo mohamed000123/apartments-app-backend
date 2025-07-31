@@ -5,12 +5,9 @@ export const createProject = (req: Request, res: Response, next: any) => {
   const schema = Joi.object({
     name: Joi.string().required(),
     description: Joi.string().optional(),
-    price: Joi.number().required(),
     location: Joi.string().required(),
-    width: Joi.number().required(),
-    meterPrice: Joi.number().required(),
     number: Joi.string().required(),
-    projectId: Joi.string().required(),
+    unitsNumber:Joi.number().required()
   });
 
   const result = schema.validate(req.body);
